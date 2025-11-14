@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <title>Zona no autorizada</title>
+    <link rel="icon" type="image/png" href="/static/imagenes/ARG_logo_ver_color_green_background.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+
+    <style>
+        :root {
+            --primary: #071d49;
+            --secondary: #c4d600;
+            --highlight: #115df5;
+            --surface: #ffffff;
+            --danger: #d93025;
+        }
+    
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+        
+        html, body {
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        body {
+            display: block;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 0;
+            background-color: var(--surface);
+            color: var(--primary);
+            font-family: 'Montserrat', sans-serif;
+            text-align: center;
+        }
+
+        header {
+            width: 100%;
+            padding: 1rem;
+            background: var(--secondary);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header img {
+            max-width: clamp(200px, 20vw, 200px);
+            height: auto;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 500px;
+            padding: clamp(16px, 4vh, 32px)
+        }
+
+        i {
+            font-size: clamp(64px, 15vw, 128px);
+            margin-bottom: clamp(16px, 4vh, 32px);
+            color: var(--danger);
+        }
+
+        .msg {
+            font-size: clamp(16px, 3vh, 24px);
+            margin-bottom: clamp(16px, 4vh, 32px);
+        }
+
+        .msg strong {
+            color: var(--danger);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: clamp(12px, 2vh, 16px) clamp(24px, 4vw, 32px);
+            font-size: clamp(16px, 3vh, 24px);
+            color: var(--surface);
+            background-color: var(--primary);
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            font-weight: 700;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <header>
+        <img src="/static/imagenes/ARG_logo_hor_color_no_background.png" alt="Logo Argos">
+    </header>
+    
+    <div class="container">
+        <div class="msg">
+                <i class="fa-solid fa-ban fa-beat-fade"></i><br>
+            <h2><strong>¡Acceso denegado!</strong></h2>
+            Estas <strong>fuera del área autorizada</strong> para registrar ese punto.
+        </div>
+        <a class="btn" href="https://www.google.com/">Volver</a>
+    </div>
+
+</body>
+</html>
